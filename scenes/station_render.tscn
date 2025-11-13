@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bjh2vgkn5mjp4" path="res://assets/station_tilda-render.png" id="1_42tmp"]
 [ext_resource type="TileSet" uid="uid://hnybemc4dnmb" path="res://assets/station_render.tres" id="2_hjkea"]
-[ext_resource type="Script" uid="uid://bxcnkyw2oi1" path="res://scenes/nav_mesh.gd" id="3_hjkea"]
+[ext_resource type="Script" path="res://scenes/nav_mesh.gd" id="3_hjkea"]
 
 [node name="station_render" type="Control"]
 layout_mode = 3
