@@ -19,3 +19,10 @@ func _ready() -> void:
 ## Method for allowing child crewmembers to access POI map positions
 func get_POI_pos(poi_name, index) -> Vector2i:
 	return POI_DICT[poi_name][index]
+
+## Method for handling user's inspecting POIs through station render window
+func check_POI_pos(pos) -> String:
+	for i in POI_DICT:
+		if pos in POI_DICT[i]:
+			return i
+	return ""
