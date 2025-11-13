@@ -24,7 +24,7 @@ func _ready() -> void:
 		for j in range(_astar.region.position.y, _astar.region.end.y):
 			var pos = Vector2i(i, j)
 			if get_cell_atlas_coords(pos) == TILES["Wall"]:
-				_astar.set_point_solid(pos)
+				set_passability(pos)
 
 # Finds a path between two points given two MAP points
 func find_path(start,end) -> PackedVector2Array:
