@@ -19,14 +19,20 @@ func _ready() -> void:
 	_astar.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 	_astar.update()
 
+	# Sets all wall tiles to be impassable
 	for i in range(_astar.region.position.x, _astar.region.end.x):
 		for j in range(_astar.region.position.y, _astar.region.end.y):
 			var pos = Vector2i(i, j)
 			if get_cell_atlas_coords(pos) == TILES["Wall"]:
 				_astar.set_point_solid(pos)
 
+# Finds a path between two points given two MAP points
 func find_path(start,end) -> PackedVector2Array:
 	return _astar.get_point_path(start,end)
+
+# Swaps the passability of a given MAP point
+func set_passability(pos) -> void:
+	_astar.set_point_solid(pos)
 
 func _process(_delta: float) -> void:
 	pass
