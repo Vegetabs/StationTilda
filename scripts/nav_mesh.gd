@@ -1,6 +1,7 @@
 class_name NavMesh
 extends TileMapLayer
 
+## Dictionary for storing atlas position of NavMesh elements
 const TILES : Dictionary = {
 	"Wall": Vector2i(11,13),
 	"Floor": Vector2i(9,15)
