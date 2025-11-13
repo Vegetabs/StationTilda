@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://bmdig43kujscj"]
+[gd_scene load_steps=2 format=3 uid="uid://bmdig43kujscj"]
+
+[ext_resource type="Script" uid="uid://bfcng1kk5ewev" path="res://scripts/furniture.gd" id="1_uouto"]
 
 [node name="furniture" type="Node2D"]
+script = ExtResource("1_uouto")
