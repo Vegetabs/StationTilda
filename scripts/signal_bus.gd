@@ -1,5 +1,5 @@
 extends Node
 
-signal request_pos_nav(pos : Vector2i)
+signal request_pos_nav(mem_id : int, pos : Vector2i)
 
-signal send_poi_nav(pos_arr : PackedVector2Array)
+signal send_poi_nav(mem_id : int, pos_arr : PackedVector2Array)

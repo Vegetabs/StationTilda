@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs8a8o8fd8we8"]
+
+[ext_resource type="Texture2D" uid="uid://c647nf02aq3wl" path="res://assets/crew_member-sprite.png" id="1_1hh8d"]
+
+[node name="crewmember" type="Node2D"]
+
+[node name="crew_icon" type="Sprite2D" parent="."]
+texture = ExtResource("1_1hh8d")
+region_rect = Rect2(0, 63, 15, 18)
