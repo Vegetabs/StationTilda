@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://cjxm0jl0odwky"]
+[gd_scene load_steps=7 format=4 uid="uid://cjxm0jl0odwky"]
 
 [ext_resource type="Texture2D" uid="uid://bjh2vgkn5mjp4" path="res://assets/station_tilda-render.png" id="1_42tmp"]
 [ext_resource type="TileSet" uid="uid://hnybemc4dnmb" path="res://assets/station_render.tres" id="2_hjkea"]
 [ext_resource type="Script" uid="uid://di61akx0loh4a" path="res://scripts/nav_mesh.gd" id="3_hjkea"]
 [ext_resource type="PackedScene" uid="uid://4k8fdp6spb4i" path="res://scenes/crew.tscn" id="4_vim0i"]
+[ext_resource type="PackedScene" uid="uid://bmbfor5rnc8o1" path="res://scenes/interactables.tscn" id="5_5bwte"]
+[ext_resource type="PackedScene" uid="uid://bmdig43kujscj" path="res://scenes/furniture.tscn" id="5_hth26"]
 
 [node name="station_render" type="Control"]
 layout_mode = 3
@@ -26,3 +28,92 @@ tile_set = ExtResource("2_hjkea")
 script = ExtResource("3_hjkea")
 
 [node name="crew" parent="." instance=ExtResource("4_vim0i")]
+
+[node name="interactables" parent="." instance=ExtResource("5_5bwte")]
+
+[node name="reactor" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(64, 16)
+scale = Vector2(3, 1)
+furn_id = "reactor"
+pos = Vector2i(5, 1)
+furn_name = "Station Reactor"
+
+[node name="oxygen" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(64, 208)
+scale = Vector2(3, 1)
+furn_id = "oxygen"
+pos = Vector2i(5, 13)
+furn_name = "Oxygen Generator"
+
+[node name="tilda_computer" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(256, 16)
+scale = Vector2(3, 1)
+furn_id = "tilda"
+pos = Vector2i(17, 1)
+furn_name = "Tilda Mainframe"
+
+[node name="analysis" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(256, 208)
+scale = Vector2(3, 1)
+furn_id = "analysis"
+pos = Vector2i(17, 13)
+furn_name = "Analysis Computer"
+
+[node name="bed1" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(32, 272)
+furn_id = "bed1"
+pos = Vector2i(2, 17)
+furn_name = "Bed"
+
+[node name="bed2" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(64, 272)
+furn_id = "bed2"
+pos = Vector2i(4, 17)
+furn_name = "Bed"
+
+[node name="bed3" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(96, 272)
+furn_id = "bed3"
+pos = Vector2i(6, 17)
+furn_name = "Bed"
+
+[node name="bed4" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(32, 304)
+furn_id = "bed4"
+pos = Vector2i(2, 19)
+furn_name = "Bed"
+
+[node name="bed5" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(64, 304)
+furn_id = "bed5"
+pos = Vector2i(4, 19)
+furn_name = "Bed"
+
+[node name="bed6" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(96, 304)
+furn_id = "bed6"
+pos = Vector2i(6, 19)
+furn_name = "Bed"
+
+[node name="research_computer" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(240, 272)
+scale = Vector2(2, 1)
+furn_id = "research1"
+furn_name = "Research Computer"
+
+[node name="research_computer2" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(272, 272)
+scale = Vector2(2, 1)
+furn_id = "research2"
+furn_name = "Research Computer"
+
+[node name="research_computer3" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(304, 272)
+scale = Vector2(2, 1)
+furn_id = "research3"
+furn_name = "Research Computer"
+
+[node name="terminal" parent="interactables" instance=ExtResource("5_hth26")]
+position = Vector2(176, 96)
+furn_id = "terminal"
+furn_name = "Tilda Terminal"

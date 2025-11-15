@@ -2,12 +2,19 @@ class_name Furniture
 extends Area2D
 ## Class for interactable elements within the station render scene (doors, computers, etc).
 
+@export var furn_id : String
 @export var pos : Vector2i
 @export var furn_name : String
 @export var desc : String
 
 var op_status : bool = true
 var active : bool = false
+
+func get_furn_id() -> String:
+	return furn_id
+
+func get_furn_pos() -> Vector2i:
+	return pos
 
 func _status_to_str() -> String:
 	if op_status == true:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmdig43kujscj"]
 
 [ext_resource type="Script" uid="uid://bfcng1kk5ewev" path="res://scripts/furniture.gd" id="1_uouto"]
-[ext_resource type="Script" path="res://scenes/furniture_collision.gd" id="2_uj4jp"]
+[ext_resource type="Script" uid="uid://c0247sbowkh70" path="res://scripts/furniture_collision.gd" id="2_uj4jp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uouto"]
 size = Vector2(16, 16)
@@ -10,6 +10,7 @@ size = Vector2(16, 16)
 script = ExtResource("1_uouto")
 
 [node name="furniture_collision" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_uouto")
 script = ExtResource("2_uj4jp")
 
