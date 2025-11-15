@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmdig43kujscj"]
+[gd_scene load_steps=4 format=3 uid="uid://bmdig43kujscj"]
 
 [ext_resource type="Script" uid="uid://bfcng1kk5ewev" path="res://scripts/furniture.gd" id="1_uouto"]
+[ext_resource type="Script" path="res://scenes/furniture_collision.gd" id="2_uj4jp"]
 
-[node name="furniture" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uouto"]
+size = Vector2(16, 16)
+
+[node name="furniture" type="Area2D"]
 script = ExtResource("1_uouto")
+
+[node name="furniture_collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uouto")
+script = ExtResource("2_uj4jp")
+
+[connection signal="input_event" from="." to="furniture_collision" method="_on_furniture_input_event"]
