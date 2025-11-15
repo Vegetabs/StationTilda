@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://cjxm0jl0odwky"]
+[gd_scene load_steps=8 format=4 uid="uid://cjxm0jl0odwky"]
 
 [ext_resource type="Texture2D" uid="uid://bjh2vgkn5mjp4" path="res://assets/station_tilda-render.png" id="1_42tmp"]
+[ext_resource type="Script" uid="uid://jp4m18mewjak" path="res://scripts/station_render.gd" id="1_xenyl"]
 [ext_resource type="TileSet" uid="uid://hnybemc4dnmb" path="res://assets/station_render.tres" id="2_hjkea"]
 [ext_resource type="Script" uid="uid://di61akx0loh4a" path="res://scripts/nav_mesh.gd" id="3_hjkea"]
 [ext_resource type="PackedScene" uid="uid://4k8fdp6spb4i" path="res://scenes/crew.tscn" id="4_vim0i"]
@@ -16,6 +17,7 @@ offset_right = -1552.0
 offset_bottom = -696.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xenyl")
 
 [node name="station_img" type="Sprite2D" parent="."]
 texture = ExtResource("1_42tmp")
